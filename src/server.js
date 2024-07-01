@@ -17,7 +17,7 @@ const setupServer = () => {
 
   app.use(logger);
   app.use(cors());
-  app.get('/api/contacts', async (req, res) => {
+  app.get('/contacts', async (req, res) => {
     const data = await getContacts();
     res.json({
       status: 200,
@@ -25,7 +25,7 @@ const setupServer = () => {
       data,
     });
   });
-  app.get('/api/contacts/:id', async (req, res) => {
+  app.get('/contacts/:id', async (req, res) => {
     try {
       const { id } = req.params;
       const data = await getContactById(id);

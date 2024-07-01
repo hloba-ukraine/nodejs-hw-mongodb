@@ -5,5 +5,3 @@ const bootstrap = async () => {
   setupServer();
 };
 bootstrap();
-
-// qT4kCVqeKwCdCvBd
